@@ -5,17 +5,17 @@
 	color = "#ff0000"
 	taste_description = "red"
 	overdose_threshold = 0
-	metabolization_rate = 20 * REAGENTS_METABOLISM
+	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	alpha = 173
 
 /datum/reagent/medicine/healthpot/on_mob_life(mob/living/carbon/M)
-	if(M.bleed_rate < 0.3)
-		M.blood_volume = min(M.blood_volume+2, BLOOD_VOLUME_MAXIMUM)
-	M.adjustBruteLoss(-3*REM, 0)
-	M.adjustFireLoss(-3*REM, 0)
-	M.adjustOxyLoss(-3, 0)
-	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, -3*REM)
-	M.adjustCloneLoss(-3*REM, 0)
+	if(C.blood_volume < BLOOD_VOLUME_NORMAL)
+		C.blood_volume += 0.5
+	M.adjustBruteLoss(-0.5*REM, 0)
+	M.adjustFireLoss(-0.5*REM, 0)
+	M.adjustOxyLoss(-1.5, 0)
+	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, -0.5*REM)
+	M.adjustCloneLoss(-0.5*REM, 0)
 	..()
 	. = 1
 
