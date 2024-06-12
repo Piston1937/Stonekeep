@@ -8,11 +8,11 @@
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	alpha = 173
 
-/datum/reagent/medicine/healthpot/on_mob_life(mob/living/carbon/M)
+/datum/reagent/medicine/healthpot/on_mob_life(mob/living/carbon/C)
 	if(C.blood_volume < BLOOD_VOLUME_NORMAL)
 		C.blood_volume += 0.5
-	M.adjustBruteLoss(-0.5*REM, 0)
-	M.adjustFireLoss(-0.5*REM, 0)
+	M.adjustBruteLoss(-1.5*REM, 0)
+	M.adjustFireLoss(-1.5*REM, 0)
 	M.adjustOxyLoss(-1.5, 0)
 	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, -0.5*REM)
 	M.adjustCloneLoss(-0.5*REM, 0)
