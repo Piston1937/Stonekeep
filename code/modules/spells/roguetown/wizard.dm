@@ -238,6 +238,7 @@
 	charging_slowdown = 1
 	chargedloop = /datum/looping_sound/invokegen
 	associated_skill = /datum/skill/magic/arcane
+
 /obj/projectile/magic/fetch/on_hit(target)
 	. = ..()
 	if(ismob(target))
@@ -247,3 +248,25 @@
 			playsound(get_turf(target), 'sound/magic/magic_nulled.ogg', 100)
 			qdel(src)
 			return BULLET_ACT_BLOCK
+
+/obj/effect/proc_holder/spell/invoked/projectile/switchplanes
+	name = "Switch Planes"
+	desc = ""
+	clothes_req = FALSE
+	range = 10
+	projectile_type = /obj/projectile/magic/swap
+	overlay_state = ""
+	sound = list('sound/magic/magnet.ogg')
+	active = FALSE
+	releasedrain = 5
+	warnie = "spellwarning"
+	no_early_release = TRUE
+	chargedrain = 1
+	chargetime = 15
+	charge_max = 10 SECONDS
+	warnie = "spellwarning"
+	no_early_release = TRUE
+	movement_interrupt = TRUE
+	charging_slowdown = 1
+	chargedloop = /datum/looping_sound/invokegen
+	associated_skill = /datum/skill/magic/arcane
