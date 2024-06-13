@@ -16,7 +16,6 @@
     )
     outfit = /datum/outfit/job/roguetown/adventurer/physicker
     ispilgrim = TRUE
-    maxchosen = 1
 
 /datum/outfit/job/roguetown/adventurer/physicker/pre_equip(mob/living/carbon/human/H)
     ..()
