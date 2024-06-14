@@ -5,6 +5,9 @@
 	name = "Aasimar"
 	id = "aasimar"
 	desc = ""
+
+	skin_tone_wording = "Crafted With"
+
 	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS,STUBBLE,OLDGREY)
 	inherent_traits = list(TRAIT_NOMOBSWAP)
 	default_features = list("mcolor" = "FFF", "wings" = "None")
@@ -79,15 +82,15 @@
 
 /datum/species/aasimar/get_skin_list()
 	return sortList(list(
-	"Planetar" = "ffd859",
-	"Deva"	   = "b6f1f2",
-	"Solar" = "daeaeb",
-	"Empyrean" = "a9ded1",
-	"Gaeian" = "db874f",
-	"Celestial" = "e1c565",
-	"Olympian" = "C7f9cc",
-	"Necran" = "23130c",
-	"Abyssal" = "22577a"
+		"Planetar" = SKIN_COLOR_PLANETAR,
+		"Deva"	   = SKIN_COLOR_DEVA,
+		"Solar" = SKIN_COLOR_SOLAR,
+		"Empyrea" = SKIN_COLOR_EMPYREA,
+		"Gaeia" = SKIN_COLOR_GAEIA,
+		"Celestial" = SKIN_COLOR_CELESTIAL,
+		"Olympia" = SKIN_COLOR_OLYMPIA,
+		"Necral" = SKIN_COLOR_NECRAL,
+		"Abyssal" = SKIN_COLOR_ABYSSAL,
 	))
 
 /datum/species/aasimar/get_hairc_list()
