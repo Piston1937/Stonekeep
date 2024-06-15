@@ -55,7 +55,7 @@
 		return
 	var/colortwo
 	if(design != "None")
-		colortwo = input(user, "Select a primary color.","Tabard Design") as null|anything in CLOTHING_COLOR_NAMES
+		colortwo = input(user, "Select a secondary color.","Tabard Design") as null|anything in CLOTHING_COLOR_NAMES
 		if(!colortwo)
 			return
 	if(world.time > (the_time + 30 SECONDS))

@@ -3,7 +3,7 @@
 	flag = MONK
 	department_flag = CHURCHMEN
 	faction = "Station"
-	total_positions = 3
+	total_positions = 4
 	spawn_positions = 4
 
 	allowed_races = list(
